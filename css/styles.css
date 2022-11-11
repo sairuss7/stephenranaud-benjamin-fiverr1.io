@@ -1,0 +1,189 @@
+@import url('/assets/webfonts/mateifont/fonts.css');
+
+:root{
+    --color-base: #000431;
+    --color-secondary: #FFF500;
+    --color-accent: #C9C104;
+    --ff-head: 'GT Flexa Trial', 'sans-serif';
+    --ff-body: 'GT Flexa Trial Md', 'sans-serif';
+    --border: 7px solid var(--color-secondary);
+    --padding-wrappe: max(1rem, min(3.125rem, calc(2.5vmin + 1.5vmin)));
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+*, ::before, ::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: var(--padding-wrappe);
+    margin: 0;
+    background-color: var(--color-base);
+    color: var(--color-secondary);
+}
+
+#wrapper {
+    border: var(--border);
+    max-width: 1440px;
+    margin: auto;
+    overflow: hidden;
+}
+
+img, svg {
+    display: block;
+    max-width: 100%;
+}
+
+.header-benj__heading {
+    font-size: clamp(2rem, 11vmin, 10rem);
+    font-family: "gtfxebl";
+}
+
+a {
+    text-decoration: none;
+    font-style: normal;
+    color: var(--color-secondary);
+}
+
+p {
+    font-size: clamp(1rem, 5vw, 1.125rem);
+    line-height: 1.2;
+}
+
+.header-benj__infos {
+    border-top: var(--border);
+    border-bottom: var(--border);
+    font-size: clamp(1.5rem, 5vmin, 2.9375rem);
+    font-family: "gtfxebo";
+}
+
+main {
+    display: flex;
+    flex-flow: row-reverse wrap;
+    justify-content: center;
+    gap: 4rem;
+}
+
+main > * {
+    width: calc(50% - 2rem);
+}
+
+.present-benj-text {
+    max-width: 377px;
+    width: 100%;
+    padding: var(--padding-wrappe);
+    font-family: "gtfr";
+}
+
+aside.benj-cool {
+    position: relative;
+    height: calc(14rem + 10vmin * 1.22);  
+}
+
+aside.benj-cool .circle, #img-benj {
+    position: absolute;
+}
+
+#img-benj {
+    bottom: 0;
+    max-height: 100%;
+    left: max(.2rem, min(2vw, 39px));
+}
+
+.circle {
+    background-color: var(--color-secondary);
+    border-radius: 50%;
+}
+
+.circle--big {
+    width: max(220px, min(calc(50vw - 10vmin), 514px));
+    height:  max(220px, min(calc(50vw - 10vmin), 514px));
+    transform-origin: 0 0;
+    left: max(1.5rem, min(5vw, 48px));
+    top: max(1.5rem, min(3.5vw, 95px));
+}
+
+.circle--mini {
+    width: min(5vw, 44px);
+    height:  min(5vw, 44px);
+    left: calc(50% + 5vmin);
+    bottom: calc(10% + 7vmin);
+}
+
+address#addr-benj {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+}
+
+address#addr-benj img {
+    width: 33.46px;
+    height: auto;
+}
+
+@media screen and (max-width: 64rem) {
+    main {
+        display: block;
+        align-items: center;
+    }
+
+    main > * {
+        width: calc(32rem - 2rem);
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 64.1rem) {
+    html, body, #wrapper {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    main {
+        height: 77%;
+    }
+
+    aside.benj-cool {
+        height: 100%;
+    }
+}
+
+.slide-text-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-text {
+    white-space: nowrap;
+    animation: marquee 20s linear infinite forwards;
+}
+
+.slide-text--reverse {
+    animation: marquee 22s linear infinite reverse;
+}
+
+.slide-text > * {
+    padding: 0 2rem;
+}
+
+.slide-text span:nth-of-type(2n) {
+    color: transparent;
+    -webkit-text-stroke-color: var(--color-secondary);
+    -webkit-text-stroke-width: 1px;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {  
+        transform: translateX(-100%);
+    }
+}
