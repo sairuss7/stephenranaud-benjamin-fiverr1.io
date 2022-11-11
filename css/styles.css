@@ -161,11 +161,11 @@ address#addr-benj img {
 
 .slide-text {
     white-space: nowrap;
-    animation: marquee 20s linear infinite forwards;
+    animation: marquee 30s linear infinite forwards;
 }
 
 .slide-text--reverse {
-    animation: marquee 22s linear infinite reverse;
+    animation: marquee 30s linear infinite reverse;
 }
 
 .slide-text > * {

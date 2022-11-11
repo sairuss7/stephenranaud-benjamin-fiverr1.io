@@ -6,7 +6,7 @@ const imgBenj = document.querySelector('#img-benj');
 document.getElementById('wrapper').addEventListener('mousemove', (e) => {
     const a = (e.clientX - window.innerWidth) / window.innerHeight * 0.5;
    
-    circleBig.style.transform = `translateX(calc(${a} * 4vh))`;
-    circleMini.style.transform = `translateX(calc(${-a} * 6vh))`;
-    imgBenj.style.transform = `translateX(calc(${-a} * 7vh))`;
+    circleBig.style.transform = `translateX(calc(${a} * 3vw))`;
+    circleMini.style.transform = `translateX(calc(${-a} * 16vw))`;
+    imgBenj.style.transform = `translateX(calc(${-a} * 5vw))`;
 });
